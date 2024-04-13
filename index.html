@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CO-Dependency</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function verify_email() {
+            var email = document.getElementById("email").value;
+            var confirm_email = document.getElementById("email2").value;
+            if (email != confirm_email) {
+                alert("Whoops!");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="denver.html">Denver</a>
+            </li>
+            <li>
+                <a href="foco.html">Fort Collins</a>
+            </li>
+            <li>
+                <a href="boulder.html">Boulder</a>
+            </li>
+        </ul>
+    </nav>
+
+<main>
+
+    <header>
+            <h1>Welcome to CO-Dependency!</h1>
+            <p>Let's learn together about all Colorado has to offer</p>
+    </header>
+
+    <aside class="fw-image">
+        <img title="Rocky Mountain Landscape" alt="Rocky Mountain Landscape" src="https://upload.wikimedia.org/wikipedia/commons/8/89/Rocky_Mountains_Colorado.JPG"><br>
+        <p class="citation"><a  href="https://commons.wikimedia.org/wiki/File:Rocky_Mountains_Colorado.JPG">Wolf Wiggum</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons</p>
+    </aside>
+    
+    <section>
+        <div class="fw-image">
+        </div>
+        <h2 id="maintitle">Colorado is great.</h2>
+        <p>Are you tempted by this snowy valley? Probably. </p>
+        <p><strong>Everything you need!</strong></p>
+        <ul>
+            <li>Mountains</li>
+            <li>Plains</li>
+            <li>Foothills</li>
+            <li>Denver</li>
+            <li>Broncos</li>
+        </ul>
+        <p>Here's <a href="https://www.colorado.com/articles/best-things-to-do-in-colorado">18 of the best things to do in CO</a>.</a></p>
+    </section>
+
+    <section>
+        <h4>Why not join our newsletter?</h4>
+        <form action="#" method="post">
+            <input type="text" name="fname" placeholder="First Name"><br><br>
+            
+            <input type="text" name="lname" placeholder="Last Name"><br><br>
+            
+            <input type="email" id="email" placeholder="email2 Address"><br><br>
+            
+            <input type="email" id="confirm_email" onchange="verify_email();" placeholder="Confirm Email Address"><br><br>
+            
+            <textarea name="question" placeholder="Question"></textarea><br><br>
+            
+            <input type="submit" onclick="verify_email();" value="Submit">
+          </form>
+    </section>
+
+</main>
+</body>
+
+</html>
